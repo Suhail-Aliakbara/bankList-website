@@ -29,3 +29,24 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+///////////////////////////////////////
+
+const header = document.querySelector('header');
+
+const cookieMessage = document.createElement('div');
+cookieMessage.classList.add('cookie-message');
+cookieMessage.innerHTML =
+  'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
+//
+// cookieMessage.style.backgroundColor = '#37383d';
+// cookieMessage.style.width = '120%';
+// header.prepend(cookieMessage);
+header.append(cookieMessage);
+
+const btnCloseCookie = document.querySelector('.btn--close-cookie');
+console.log(btnCloseCookie);
+btnCloseCookie.addEventListener('click', function () {
+  cookieMessage.remove();
+  cookieMessage.parentElement.removeChild(cookieMessage);
+});
