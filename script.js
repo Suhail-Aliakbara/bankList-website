@@ -43,7 +43,7 @@ cookieMessage.innerHTML =
 header.append(cookieMessage);
 
 const btnCloseCookie = document.querySelector('.btn--close-cookie');
-console.log(btnCloseCookie);
+// console.log(btnCloseCookie);
 btnCloseCookie.addEventListener('click', function () {
   cookieMessage.remove();
   cookieMessage.parentElement.removeChild(cookieMessage);
@@ -59,11 +59,11 @@ const section1 = document.getElementById('section--1');
 
 btnScrollTo.addEventListener('click', function (e) {
   const s1Coords = section1.getBoundingClientRect();
-  console.log(s1Coords);
+  // console.log(s1Coords);
 
-  console.log(e.target.getBoundingClientRect());
+  // console.log(e.target.getBoundingClientRect());
 
-  console.log('current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+  // console.log('current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
 
   console.log(
     'height/width viewport',
@@ -117,6 +117,34 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
       behavior: 'smooth',
     });
   }
+});
+/////////////////////////
+//Operations
+const tabsContainer = document.querySelector('.operations__tab-container');
+const operationTab = document.querySelectorAll('.operations__tab');
+const operationContent = document.querySelectorAll('.operations__content');
+
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+  // console.log(clicked);
+
+  //Guard clause
+  if (!clicked) return;
+
+  // Removing the active classes
+  operationTab.forEach(e => e.classList.remove('operations__tab--active'));
+  operationContent.forEach(e =>
+    e.classList.remove('operations__content--active')
+  );
+
+  //Active tab
+  clicked.classList.add('operations__tab--active');
+
+  //Active Content area
+  // console.log(clicked.dataset.tab);
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
 });
 
 /*-------------------------------------------------
@@ -199,7 +227,7 @@ document.querySelector('.nav').addEventListener(
 );
 --------------------------*/
 //Dom traversing
-
+/*------------------------------------
 const h1 = document.querySelector('h1');
 
 console.log(h1.querySelectorAll('.highlight')); //for all children (childrens children ...)
@@ -226,3 +254,4 @@ console.log(h1.parentElement.children);
 [...h1.parentElement.children].forEach(function (el) {
   if (el !== h1) el.style.transform = 'scale(0.5)';
 });
+---------------------------------*/
