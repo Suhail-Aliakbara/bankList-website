@@ -33,7 +33,7 @@ body {
   background-color: #f3f3f3;
 }
 
-/* GENERAL ELEMENTS */
+/*------------ GENERAL ELEMENTS ------------------*/
 .section {
   padding: 15rem 3rem;
   border-top: 1px solid #ddd;
@@ -113,7 +113,7 @@ img {
   filter: blur(20px);
 }
 
-/* NAVIGATION */
+/*------------- NAVIGATION --------------------*/
 .nav {
   display: flex;
   justify-content: space-between;
@@ -170,7 +170,7 @@ img {
   color: #333;
 }
 
-/* HEADER */
+/*----------------- HEADER -----------------*/
 .header {
   margin-top: 0;
   padding: 0 3rem;
@@ -229,7 +229,7 @@ h4 {
   background-image: var(--gradient-primary);
 }
 
-/* FEATURES */
+/*-------------- FEATURES --------------*/
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -270,7 +270,7 @@ h4 {
   margin-bottom: 1rem;
 }
 
-/* OPERATIONS */
+/*------------- OPERATIONS ---------------*/
 .operations {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
@@ -373,7 +373,7 @@ h4 {
   fill: var(--color-tertiary);
 }
 
-/* SLIDER */
+/*------------- SLIDER -------------*/
 .slider {
   max-width: 100rem;
   height: 50rem;
@@ -459,12 +459,12 @@ h4 {
 }
 
 .dots__dot--active {
-  /* background-color: #fff; */
+  /* background-color: #fff; // for image component */
   background-color: #888;
   opacity: 1;
 }
 
-/* TESTIMONIALS */
+/*------ TESTIMONIALS -------*/
 .testimonial {
   width: 65%;
   position: relative;
@@ -728,7 +728,7 @@ h4 {
   }
 
   body {
-    padding: 4rem;
+    padding: 0 4rem;
   }
 
   .modal {
